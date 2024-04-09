@@ -43,7 +43,6 @@ class Json extends Action
      */
     private $remoteAddress;
 
-
     /**
      * Json constructor.
      *
@@ -61,8 +60,7 @@ class Json extends Action
         FeedHelper    $feedHelper,
         JsonFactory   $resultJsonFactory,
         RemoteAddress $remoteAddress
-    )
-    {
+    ) {
         $this->generateModel = $generateModel;
         $this->generalHelper = $generalHelper;
         $this->feedHelper = $feedHelper;

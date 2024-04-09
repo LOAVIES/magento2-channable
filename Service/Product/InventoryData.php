@@ -85,8 +85,6 @@ class InventoryData
         foreach ($inventoryData as $data) {
             $this->inventory[$stockId][$data['sku']] = $data;
         }
-
-
     }
 
     /**
