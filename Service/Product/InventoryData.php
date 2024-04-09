@@ -68,7 +68,7 @@ class InventoryData
      *
      * @return void
      */
-    public function getInventoryData(array $skus, int $stockId): void
+    private function getInventoryData(array $skus, int $stockId): void
     {
         $connection = $this->resourceConnection->getConnection();
         $tableName = $this->resourceConnection->getTableName('inventory_stock_' . $stockId);
@@ -87,7 +87,6 @@ class InventoryData
         }
 
 
-//        print_r((string)$select);
     }
 
     /**
