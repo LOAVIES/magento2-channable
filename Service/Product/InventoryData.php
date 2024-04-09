@@ -148,8 +148,9 @@ class InventoryData
         $inventoryData = $this->inventory[$config['inventory']['stock_id']][$product->getSku()] ?? [];
         $reservations = $this->reservation[$config['inventory']['stock_id']][$product->getSku()] ?? 0;
 
-        $qty = isset($inventoryData['quantity']) ? $inventoryData['quantity'] - $reservations : 0;
+        $qty = isset($inventoryData['quantity']) ? $inventoryData['quantity'] + $reservations : 0;
         $isSalable = $inventoryData['is_salable'] ?? 0;
+        $isSalable = $qty <= 0 ? "0" : $isSalable;
 
         return $product->setQty($qty)
             ->setIsSalable($isSalable)

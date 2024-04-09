@@ -46,19 +46,19 @@ class Json extends Action
     /**
      * Json constructor.
      *
-     * @param Context       $context
+     * @param Context $context
      * @param GeneralHelper $generalHelper
      * @param GenerateModel $generateModel
-     * @param FeedHelper    $feedHelper
-     * @param JsonFactory   $resultJsonFactory
+     * @param FeedHelper $feedHelper
+     * @param JsonFactory $resultJsonFactory
      * @param RemoteAddress $remoteAddress
      */
     public function __construct(
-        Context $context,
+        Context       $context,
         GeneralHelper $generalHelper,
         GenerateModel $generateModel,
-        FeedHelper $feedHelper,
-        JsonFactory $resultJsonFactory,
+        FeedHelper    $feedHelper,
+        JsonFactory   $resultJsonFactory,
         RemoteAddress $remoteAddress
     ) {
         $this->generateModel = $generateModel;
