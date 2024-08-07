@@ -1296,7 +1296,7 @@ class Product extends AbstractHelper
         $visibility = $product->getVisibility();
         $parentIds = [];
 
-        if (!in_array($product->getTypeId(), ['simple', 'downloadable', 'virtual'])) {
+        if (!in_array($product->getTypeId(), ['simple', 'downloadable', 'virtual', 'giftcard'])) {
             return false;
         }
 
