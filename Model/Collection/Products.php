@@ -416,6 +416,8 @@ class Products
             $this->joinPriceIndexLeft($collection, $config['website_id']);
             return $collection->load();
         }
+
+        return $this->productCollectionFactory->create()->addIdFilter(null);
     }
 
     /**
